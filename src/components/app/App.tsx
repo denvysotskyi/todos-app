@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import styled from 'styled-components'
-import Header from '../header/Header'
+import Navbar from '../navbar/Navbar'
 import Todo from '../todo/Todo'
 
 const AppWrapper = styled.div`
@@ -24,7 +24,7 @@ const Content = styled.div`
 const App: FC = () => (
    <AppWrapper>
      <Container>
-       <Header />
+       <Navbar />
        <Content>
          <Todo />
        </Content>

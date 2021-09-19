@@ -17,7 +17,7 @@ const Logo = styled.img`
   height: 42px;
 `
 
-const Header: FC = () => (
+const Navbar: FC = () => (
     <HeaderWrapper>
       <LogoWrapper>
         <Logo src={logo}
@@ -27,4 +27,4 @@ const Header: FC = () => (
     </HeaderWrapper>
   )
 
-export default Header
+export default Navbar

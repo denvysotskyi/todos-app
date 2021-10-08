@@ -1,4 +1,3 @@
-import { FC } from 'react'
 import styled from 'styled-components'
 import Navbar from '../navbar/Navbar'
 import Todo from '../todo/Todo'
@@ -21,7 +20,7 @@ const Content = styled.div`
   min-height: 700px;
 `
 
-const App: FC = () => (
+const App = (): JSX.Element => (
    <AppWrapper>
      <Container>
        <Navbar />

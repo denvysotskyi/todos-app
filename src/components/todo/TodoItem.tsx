@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { FC, ChangeEventHandler } from 'react'
-import { ITodoItemProps } from '../../types/data'
+import { ChangeEventHandler } from 'react'
+import { ITodoItem } from '../../interfaces/TodoItem.props'
 
 const ItemWrapper = styled.div`
   margin-bottom: 12px;
@@ -36,15 +36,11 @@ const Button = styled.button`
   }
 `
 
-const TodoItem: FC<ITodoItemProps> = ({ id, title, complete, removeTodo, toggleTodo }) => {
+const TodoItem = ({ id, title, complete, removeTodo, toggleTodo }: ITodoItem): JSX.Element => {
 
-  const handleChange: ChangeEventHandler<HTMLInputElement> = (e) => {
-    toggleTodo(id)
-  }
+  const handleChange: ChangeEventHandler<HTMLInputElement> = e => toggleTodo(id)
 
-  const handleClick = () => {
-    removeTodo(id)
-  }
+  const handleClick = () => removeTodo(id)
 
   return (
     <ItemWrapper>

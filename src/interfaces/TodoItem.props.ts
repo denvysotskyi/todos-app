@@ -4,7 +4,7 @@ export interface ITodo {
   complete: boolean
 }
 
-export interface ITodoItemProps extends ITodo {
+export interface ITodoItem extends ITodo {
   removeTodo: (id: number) => void
   toggleTodo: (id: number) => void
 }

@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { FC } from 'react'
 import logo from '../../assets/images/logo.png'
 
 const HeaderWrapper = styled.div`
@@ -17,14 +16,14 @@ const Logo = styled.img`
   height: 42px;
 `
 
-const Navbar: FC = () => (
-    <HeaderWrapper>
-      <LogoWrapper>
-        <Logo src={logo}
-              alt={'logo'}
-        />
-      </LogoWrapper>
-    </HeaderWrapper>
-  )
+const Navbar = (): JSX.Element => (
+  <HeaderWrapper>
+    <LogoWrapper>
+      <Logo src={logo}
+            alt={'logo'}
+      />
+    </LogoWrapper>
+  </HeaderWrapper>
+)
 
 export default Navbar

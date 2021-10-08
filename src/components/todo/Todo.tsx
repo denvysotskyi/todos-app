@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { FC, useState, useEffect, useRef,
+import { useState, useEffect, useRef,
   ChangeEventHandler, KeyboardEventHandler } from 'react'
-import { ITodo } from '../../types/data'
+import { ITodo } from '../../interfaces/TodoItem.props'
 import TodoItem from './TodoItem'
 
 const MainWrapper = styled.div`
@@ -106,16 +106,16 @@ const List = styled.ul`
   margin-left: 25px;
 `
 
-const Todo: FC = () => {
+const Todo = (): JSX.Element => {
 
   const [value, setValue] = useState('')
   const [todos, setTodos] = useState<ITodo[]>([])
 
   const inputRef = useRef<HTMLInputElement>(null)
 
-  const handleChange: ChangeEventHandler<HTMLInputElement> = (e) => setValue(e.target.value)
+  const handleChange: ChangeEventHandler<HTMLInputElement> = e => setValue(e.target.value)
 
-  const handleKeyDown: KeyboardEventHandler<HTMLInputElement> = (e) => {
+  const handleKeyDown: KeyboardEventHandler<HTMLInputElement> = e => {
     if (e.key === 'Enter') {
       addTodo()
     }
@@ -132,9 +132,7 @@ const Todo: FC = () => {
     }
   }
 
-  const removeTodo = (id: number): void => {
-    setTodos(todos.filter(todo => todo.id !== id))
-  }
+  const removeTodo = (id: number): void => setTodos(todos.filter(todo => todo.id !== id))
 
   const toggleTodo = (id: number): void => {
     setTodos(todos.map(todo => {

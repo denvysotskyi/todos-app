@@ -38,9 +38,9 @@ const Button = styled.button`
 
 const TodoItem = ({ id, title, complete, removeTodo, toggleTodo }: ITodoItem): JSX.Element => {
 
-  const handleChange: ChangeEventHandler<HTMLInputElement> = e => toggleTodo(id)
+  const handleChange = (): void => toggleTodo(id)
 
-  const handleClick = () => removeTodo(id)
+  const handleClick = (): void => removeTodo(id)
 
   return (
     <ItemWrapper>

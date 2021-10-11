@@ -113,15 +113,15 @@ const Todo = (): JSX.Element => {
 
   const inputRef = useRef<HTMLInputElement>(null)
 
-  const handleChange: ChangeEventHandler<HTMLInputElement> = e => setValue(e.target.value)
+  const handleChange: ChangeEventHandler<HTMLInputElement> = (e): void => setValue(e.target.value)
 
-  const handleKeyDown: KeyboardEventHandler<HTMLInputElement> = e => {
+  const handleKeyDown: KeyboardEventHandler<HTMLInputElement> = (e): void => {
     if (e.key === 'Enter') {
       addTodo()
     }
   }
 
-  const addTodo = () => {
+  const addTodo = (): void => {
     if (value) {
       setTodos([...todos, {
         id: Date.now(),

@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { ChangeEventHandler } from 'react'
 import { ITodoItem } from '../../interfaces/TodoItem.props'
 
 const ItemWrapper = styled.div`

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { useState, useEffect, useRef,
   ChangeEventHandler, KeyboardEventHandler } from 'react'
-import { ITodo } from '../../interfaces/TodoItem.props'
+import { ITodoProps } from '../../interfaces/TodoItem.props'
 import TodoItem from './TodoItem'
 
 const MainWrapper = styled.div`
@@ -109,7 +109,7 @@ const List = styled.ul`
 const Todo = (): JSX.Element => {
 
   const [value, setValue] = useState('')
-  const [todos, setTodos] = useState<ITodo[]>([])
+  const [todos, setTodos] = useState<ITodoProps[]>([])
 
   const inputRef = useRef<HTMLInputElement>(null)
 

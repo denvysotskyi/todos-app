@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { ITodoItem } from '../../interfaces/TodoItem.props'
+import { ITodoMethods } from '../../interfaces/TodoItem.props'
 
 const ItemWrapper = styled.div`
   margin-bottom: 12px;
@@ -35,7 +35,7 @@ const Button = styled.button`
   }
 `
 
-const TodoItem = ({ id, title, complete, removeTodo, toggleTodo }: ITodoItem): JSX.Element => {
+const TodoItem = ({ id, title, complete, removeTodo, toggleTodo }: ITodoMethods): JSX.Element => {
 
   const handleChange = (): void => toggleTodo(id)
 

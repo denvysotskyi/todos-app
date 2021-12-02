@@ -1,6 +1,6 @@
 ### Description of application
 
-This app is a simple to-do list
+This app - simple to-do list. It made on React.
 
 ### Stay in touch
 
